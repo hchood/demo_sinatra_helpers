@@ -1,4 +1,7 @@
 require 'sinatra'
+require 'sinatra/reloader'
+require 'csv'
+require 'pry'
 
 def read_people_from(filename)
   people = []
