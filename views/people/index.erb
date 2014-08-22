@@ -1,7 +1,14 @@
 <h2>All People</h2>
 
 <ul>
-  <% @people.each do |people| %>
-    <li>I WANT TO OUTPUT EACH PERSON'S FULL NAME HERE USING A HELPER</li>
+  <% @people.each do |person| %>
+    <li><%= full_name(person) %></li>
   <% end %>
 </ul>
+
+<ul>
+  <% full_names(@people).each do |name| %>
+    <li><%= name %></li>
+  <% end %>
+</ul>
+

@@ -13,6 +13,22 @@ def read_people_from(filename)
   people
 end
 
+helpers do
+  def full_name(person)
+    "#{person['First Name']} #{person['Last Name']}"
+  end
+
+  def full_names(people)
+    names = []
+
+    people.each do |person|
+      names << full_name(person)
+    end
+
+    names
+  end
+end
+
 get '/people' do
   @people = read_people_from('people.csv')
 
